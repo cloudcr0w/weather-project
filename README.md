@@ -18,7 +18,7 @@ This repository showcases a **serverless application** that periodically fetches
 
 ## PROJECT STATUS
 
-We are currently **building** the data pipeline and functionalities. Expect frequent commits and updates as we refine the process.
+I am currently **building** the data pipeline and functionalities. Expect frequent commits and updates as we refine the process.
 
 ## CONTRIBUTION & FEEDBACK
 
