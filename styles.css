@@ -1,26 +1,33 @@
-
+/* Ogólne style */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f3f4f6;
     color: #333;
-    background: linear-gradient(120deg, #0d1b2a, #1b263b, #234264);
 }
 
-
-header {
-    background-color: #1b263b;
-    color: white;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+}
+
+/* Nagłówek */
+header {
+    background: #1d3557;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -28,73 +35,80 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: white;
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
 }
 
-
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Sekcje */
+.section {
+    padding: 40px 0;
 }
 
-section h2 {
-    color: #1b263b;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+.section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1d3557;
 }
 
-section ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.section.dark {
+    background: #457b9d;
+    color: #fff;
+}
+
+.section.dark h2 {
+    color: #f1faee;
+}
+
+.section ul {
+    list-style: none;
     padding: 0;
+    text-align: center;
 }
 
-section ul li {
-    margin: 5px 0;
+.section ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
 
-
+/* Galeria */
 .gallery {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .gallery img {
     width: 200px;
     height: 150px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery img:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
-
+/* Stopka */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #1b263b;
-    color: white;
+    background: #1d3557;
+    color: #fff;
+    padding: 10px 0;
     margin-top: 20px;
 }

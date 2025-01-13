@@ -4,75 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App - Wrocław</title>
+    <title>Aplikacja Pogodowa - Wrocław</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Weather App - Wrocław</h1>
-        <nav>
-            <ul>
-                <li><a href="#weather">Pogoda</a></li>
-                <li><a href="#explore">Co zwiedzić</a></li>
-                <li><a href="#history">Historia</a></li>
-                <li><a href="#events">Wydarzenia</a></li>
-                <li><a href="#gallery">Galeria</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Aplikacja Pogodowa</h1>
+            <nav>
+                <ul>
+                    <li><a href="#weather">Pogoda</a></li>
+                    <li><a href="#explore">Co Zwiedzić</a></li>
+                    <li><a href="#events">Wydarzenia</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Sekcja pogody -->
-        <section id="weather">
-            <h2>Pogoda we Wrocławiu</h2>
-            <div id="weather-data">
-                <p>Ładowanie danych pogodowych...</p>
+        <!-- Sekcja Pogoda -->
+        <section id="weather" class="section">
+            <div class="container">
+                <h2>Pogoda we Wrocławiu</h2>
+                <div id="weather-data">
+                    <p>Ładowanie danych...</p>
+                </div>
             </div>
         </section>
 
-        <!-- Co zwiedzić -->
-        <section id="explore">
-            <h2>Co zwiedzić we Wrocławiu</h2>
-            <ul>
-                <li>Rynek Główny i Ratusz</li>
-                <li>Ostrów Tumski</li>
-                <li>Panorama Racławicka</li>
-                <li>Zoo i Afrykarium</li>
-            </ul>
+        <!-- Sekcja Co Zwiedzić -->
+        <section id="explore" class="section dark">
+            <div class="container">
+                <h2>Co Zwiedzić</h2>
+                <ul>
+                    <li>Rynek Główny</li>
+                    <li>Ostrów Tumski</li>
+                    <li>Hala Stulecia</li>
+                    <li>Panorama Racławicka</li>
+                </ul>
+            </div>
         </section>
 
-        <!-- Historia -->
-        <section id="history">
-            <h2>Historia Wrocławia</h2>
-            <p>Wrocław, miasto stu mostów, posiada bogatą historię sięgającą X wieku. Był jednym z najważniejszych miast
-                Śląska i przez wieki zmieniał przynależność państwową, co wzbogaciło jego kulturę i architekturę.</p>
+        <!-- Sekcja Wydarzenia -->
+        <section id="events" class="section">
+            <div class="container">
+                <h2>Wydarzenia</h2>
+                <ul>
+                    <li>Jarmark Bożonarodzeniowy - grudzień</li>
+                    <li>Festiwal Filmowy Nowe Horyzonty - lipiec</li>
+                    <li>Festiwal Dobrego Piwa - czerwiec</li>
+                </ul>
+            </div>
         </section>
 
-        <!-- Wydarzenia -->
-        <section id="events">
-            <h2>Wydarzenia we Wrocławiu</h2>
-            <ul>
-                <li>Jarmark Bożonarodzeniowy - grudzień</li>
-                <li>Festiwal Filmowy Nowe Horyzonty - lipiec</li>
-                <li>Festiwal Dobrego Piwa - czerwiec</li>
-            </ul>
-        </section>
-
-        <!-- Galeria -->
-        <section id="gallery">
-            <h2>Galeria Wrocławia</h2>
-            <div class="gallery">
-                <img src="image1.jpg" alt="Rynek Główny">
-                <img src="image2.jpg" alt="Panorama Racławicka">
-                <img src="image3.jpg" alt="Ostrów Tumski">
+        <!-- Sekcja Galeria -->
+        <section id="gallery" class="section dark">
+            <div class="container">
+                <h2>Galeria</h2>
+                <div class="gallery">
+                    <img src="image1.jpg" alt="Wrocław">
+                    <img src="image2.jpg" alt="Ostrów Tumski">
+                    <img src="image3.jpg" alt="Hala Stulecia">
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Weather App - Wrocław. Wszystkie prawa zastrzeżone.</p>
+        <p>&copy; 2025 Aplikacja Pogodowa - Wszystkie prawa zastrzeżone.</p>
     </footer>
+
 
     <script>
         // URL API Gateway
