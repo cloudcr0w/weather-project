@@ -7,6 +7,16 @@ WELCOME to the WEATHER-PROJECT
 
 This repository showcases a **serverless application** that periodically fetches weather data from a public API, stores it in the cloud, processes the information, and (in future iterations) visualizes the results.
 
+### Wrocław Weather App
+
+This is a simple weather application showcasing the current weather data for Wrocław, Poland. The weather data is fetched from the OpenWeather API and is updated once a day. The app includes additional features such as:
+
+- **Gallery** : A small collection of images showcasing iconic places in Wrocław, including attractions like the Main Square, Ostrów Tumski, and the Centennial Hall.
+What to Explore: Short descriptions of key attractions and their significance.
+- **Events** : Information about major upcoming events in Wrocław, such as the Christmas Market, Good Beer Festival, and New Horizons Film Festival.
+- **Multilingual Support** : The app supports both Polish and English languages, with a simple toggle switch to change the language.
+The application provides a clean, responsive design, making it user-friendly on both desktop and mobile devices.
+
 ## KEY AWS SERVICES
 
 - **AWS Lambda** – Cyclical data fetching and processing
