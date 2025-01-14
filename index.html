@@ -11,15 +11,20 @@
 <body>
     <header>
         <div class="container">
-            <h1>Aplikacja Pogodowa</h1>
+            <h1 class="lang-pl">Aplikacja Pogodowa</h1>
+            <h1 class="lang-en" style="display: none;">Weather Application</h1>
             <nav>
                 <ul>
-                    <li><a href="#weather">Pogoda</a></li>
-                    <li><a href="#explore">Co Zwiedzić</a></li>
-                    <li><a href="#events">Wydarzenia</a></li>
-                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#weather" class="lang-pl">Pogoda</a><a href="#weather" class="lang-en" style="display: none;">Weather</a></li>
+                    <li><a href="#explore" class="lang-pl">Co Zwiedzić</a><a href="#explore" class="lang-en" style="display: none;">Explore</a></li>
+                    <li><a href="#events" class="lang-pl">Wydarzenia</a><a href="#events" class="lang-en" style="display: none;">Events</a></li>
+                    <li><a href="#gallery" class="lang-pl">Galeria</a><a href="#gallery" class="lang-en" style="display: none;">Gallery</a></li>
                 </ul>
             </nav>
+            <div class="language-switcher">
+                <button id="switch-pl" class="active">PL</button>
+                <button id="switch-en">EN</button>
+            </div>
         </div>
     </header>
 
@@ -27,9 +32,19 @@
         <!-- Sekcja Pogoda -->
         <section id="weather" class="section">
             <div class="container">
-                <h2>Pogoda we Wrocławiu</h2>
+                <h2 class="lang-pl">Pogoda we Wrocławiu</h2>
+                <h2 class="lang-en" style="display: none;">Weather in Wrocław</h2>
                 <div id="weather-data">
-                    <p>Ładowanie danych...</p>
+                    <div class="weather-day" id="yesterday">
+                        <h3 class="lang-pl">Wczoraj</h3>
+                        <h3 class="lang-en" style="display: none;">Yesterday</h3>
+                        <p>Ładowanie danych...</p>
+                    </div>
+                    <div class="weather-day" id="today">
+                        <h3 class="lang-pl">Dzisiaj</h3>
+                        <h3 class="lang-en" style="display: none;">Today</h3>
+                        <p>Ładowanie danych...</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -37,62 +52,26 @@
         <!-- Sekcja Co Zwiedzić -->
         <section id="explore" class="section dark">
             <div class="container">
-                <h2>Co Zwiedzić</h2>
+                <h2 class="lang-pl">Co Zwiedzić</h2>
+                <h2 class="lang-en" style="display: none;">What to Explore</h2>
                 <ul>
-                    <li>Rynek Główny</li>
-                    <li>Ostrów Tumski</li>
-                    <li>Hala Stulecia</li>
-                    <li>Panorama Racławicka</li>
+                    <li class="lang-pl">Rynek Główny</li>
+                    <li class="lang-en" style="display: none;">Main Square</li>
+                    <li class="lang-pl">Ostrów Tumski</li>
+                    <li class="lang-en" style="display: none;">Ostrów Tumski</li>
+                    <li class="lang-pl">Hala Stulecia</li>
+                    <li class="lang-en" style="display: none;">Centennial Hall</li>
                 </ul>
-            </div>
-        </section>
-
-        <!-- Sekcja Wydarzenia -->
-        <section id="events" class="section">
-            <div class="container">
-                <h2>Wydarzenia</h2>
-                <ul>
-                    <li>Jarmark Bożonarodzeniowy - grudzień</li>
-                    <li>Festiwal Filmowy Nowe Horyzonty - lipiec</li>
-                    <li>Festiwal Dobrego Piwa - czerwiec</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Sekcja Galeria -->
-        <section id="gallery" class="section dark">
-            <div class="container">
-                <h2>Galeria</h2>
-                <div class="gallery">
-                    <img src="image1.jpg" alt="Wrocław">
-                    <img src="image2.jpg" alt="Ostrów Tumski">
-                    <img src="image3.jpg" alt="Hala Stulecia">
-                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Aplikacja Pogodowa - Wszystkie prawa zastrzeżone.</p>
+        <p class="lang-pl">&copy; 2025 Aplikacja Pogodowa - Wszystkie prawa zastrzeżone.</p>
+        <p class="lang-en" style="display: none;">&copy; 2025 Weather Application - All rights reserved.</p>
     </footer>
 
-
-    <script>
-        // URL API Gateway
-        const apiUrl = "https://6yd3aewsd4.execute-api.us-east-1.amazonaws.com/weather";
-
-        // Fetch data from API
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('weather-data');
-                container.innerHTML = JSON.stringify(data, null, 2);
-            })
-            .catch(error => {
-                console.error("Error fetching weather data:", error);
-                document.getElementById('weather-data').innerText = "Failed to load data.";
-            });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
