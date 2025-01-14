@@ -11,14 +11,18 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="lang-pl">Aplikacja Pogodowa</h1>
-            <h1 class="lang-en" style="display: none;">Weather Application</h1>
+            <h1 class="lang-pl">Miasto Wrocław</h1>
+            <h1 class="lang-en" style="display: none;">Wrocław City</h1>
             <nav>
                 <ul>
-                    <li><a href="#weather" class="lang-pl">Pogoda</a><a href="#weather" class="lang-en" style="display: none;">Weather</a></li>
-                    <li><a href="#explore" class="lang-pl">Co Zwiedzić</a><a href="#explore" class="lang-en" style="display: none;">Explore</a></li>
-                    <li><a href="#events" class="lang-pl">Wydarzenia</a><a href="#events" class="lang-en" style="display: none;">Events</a></li>
-                    <li><a href="#gallery" class="lang-pl">Galeria</a><a href="#gallery" class="lang-en" style="display: none;">Gallery</a></li>
+                    <li><a href="#weather" class="lang-pl">Pogoda</a><a href="#weather" class="lang-en"
+                            style="display: none;">Weather</a></li>
+                    <li><a href="#explore" class="lang-pl">Co Zwiedzić</a><a href="#explore" class="lang-en"
+                            style="display: none;">Explore</a></li>
+                    <li><a href="#events" class="lang-pl">Wydarzenia</a><a href="#events" class="lang-en"
+                            style="display: none;">Events</a></li>
+                    <li><a href="#gallery" class="lang-pl">Galeria</a><a href="#gallery" class="lang-en"
+                            style="display: none;">Gallery</a></li>
                 </ul>
             </nav>
             <div class="language-switcher">
@@ -48,20 +52,87 @@
                 </div>
             </div>
         </section>
+        <!-- Sekcja wydarzenia -->
+        <section id="events" class="section">
+            <div class="container">
+                <h2>Wydarzenia</h2>
+                <div class="events">
+                    <div class="event">
+                        <img src="/img/Festiwal-Dobrego-Piwa-.jpg" alt="Festiwal Dobrego Piwa">
+                        <h3>Festiwal Dobrego Piwa</h3>
+                        <p>Czerwcowy festiwal, który przyciąga miłośników piwa z całego świata. Oferuje szeroki wybór
+                            rzemieślniczych piw i pysznego jedzenia.</p>
+                    </div>
+                    <div class="event">
+                        <img src="/img/jarmark.jpg" alt="Jarmark Bożonarodzeniowy">
+                        <h3>Jarmark Bożonarodzeniowy</h3>
+                        <p>Grudniowa atrakcja, pełna świątecznych straganów, ozdób i tradycyjnych polskich smakołyków.
+                            Idealne miejsce na zakupy i zimową atmosferę.</p>
+                    </div>
+                    <div class="event">
+                        <img src="/img/horyzonty.jpg" alt="Festiwal Filmowy Nowe Horyzonty">
+                        <h3>Festiwal Filmowy Nowe Horyzonty</h3>
+                        <p>Jedno z najważniejszych wydarzeń filmowych w Polsce. Lipcowe projekcje kina niezależnego i
+                            artystycznego przyciągają tłumy widzów.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Sekcja Co Zwiedzić -->
         <section id="explore" class="section dark">
             <div class="container">
                 <h2 class="lang-pl">Co Zwiedzić</h2>
                 <h2 class="lang-en" style="display: none;">What to Explore</h2>
-                <ul>
-                    <li class="lang-pl">Rynek Główny</li>
-                    <li class="lang-en" style="display: none;">Main Square</li>
-                    <li class="lang-pl">Ostrów Tumski</li>
-                    <li class="lang-en" style="display: none;">Ostrów Tumski</li>
-                    <li class="lang-pl">Hala Stulecia</li>
-                    <li class="lang-en" style="display: none;">Centennial Hall</li>
-                </ul>
+                <div class="attractions">
+                    <!-- Rynek Główny -->
+                    <div class="attraction">
+                        <img src="/img/rynek.jpg" alt="Rynek Główny">
+                        <h3 class="lang-pl">Rynek Główny</h3>
+                        <h3 class="lang-en" style="display: none;">Main Square</h3>
+                        <p class="lang-pl">Serce Wrocławia z pięknym Ratuszem, kolorowymi kamienicami i licznymi
+                            restauracjami. Idealne miejsce na spacer.</p>
+                        <p class="lang-en" style="display: none;">The heart of Wrocław with a beautiful Town Hall,
+                            colorful tenement houses, and numerous restaurants. Perfect for a walk.</p>
+                    </div>
+
+                    <!-- Ostrów Tumski -->
+                    <div class="attraction">
+                        <img src="/img/ostrow_tumski.jpg" alt="Ostrów Tumski">
+                        <h3 class="lang-pl">Ostrów Tumski</h3>
+                        <h3 class="lang-en" style="display: none;">Ostrów Tumski</h3>
+                        <p class="lang-pl">Najstarsza część Wrocławia z majestatyczną katedrą św. Jana Chrzciciela.
+                            Wieczorem zapalane są tu ręczne latarnie gazowe.</p>
+                        <p class="lang-en" style="display: none;">The oldest part of Wrocław with the majestic Cathedral
+                            of St. John the Baptist. Gas lamps are lit here by hand in the evening.</p>
+                    </div>
+
+                    <!-- Hala Stulecia -->
+                    <div class="attraction">
+                        <img src="/img/hala_stulecia.jpg" alt="Hala Stulecia">
+                        <h3 class="lang-pl">Hala Stulecia</h3>
+                        <h3 class="lang-en" style="display: none;">Centennial Hall</h3>
+                        <p class="lang-pl">Imponująca hala widowiskowa wpisana na listę UNESCO. Obok znajduje się piękna
+                            Pergola i Fontanna Multimedialna.</p>
+                        <p class="lang-en" style="display: none;">An impressive event hall listed as a UNESCO World
+                            Heritage Site. Nearby is the beautiful Pergola and Multimedia Fountain.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sekcja galeria -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="lang-pl">Galeria Wrocławia</h2>
+                <h2 class="lang-en" style="display: none;">Gallery of Wrocław</h2>
+                <div class="gallery">
+                    <img src="/img/rynek.jpg" alt="Rynek Główny">
+                    <img src="/img/ostrow-tumski.jpg" alt="Ostrów Tumski">
+                    <img src="/img/panorama.jpg" alt="Panorama Racławicka">
+                    <img src="/img/most.jpg" alt="Most Grunwaldzki">
+                    <img src="/img/zoo.jpg" alt="Zoo i Afrykarium">
+                    <img src="/img/centennial-hall.jpg" alt="Hala Stulecia">
+                </div>
             </div>
         </section>
     </main>
