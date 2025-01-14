@@ -17,6 +17,9 @@ What to Explore: Short descriptions of key attractions and their significance.
 - **Multilingual Support** : The app supports both Polish and English languages, with a simple toggle switch to change the language.
 The application provides a clean, responsive design, making it user-friendly on both desktop and mobile devices.
 
+**Continuous Deployment with AWS Amplify**
+This project is hosted and continuously deployed using AWS Amplify. Changes pushed to the main branch are automatically built and deployed.
+
 ## KEY AWS SERVICES
 
 - **AWS Lambda** – Cyclical data fetching and processing
