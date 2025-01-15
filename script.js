@@ -13,40 +13,32 @@ const weatherIcons = {
 
 // Fetch weather data from API
 fetch(apiUrl)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
-        // Select elements for yesterday and today
-        const yesterday = document.getElementById("yesterday");
-        const today = document.getElementById("today");
+        const weatherDataContainer = document.getElementById("weather-data");
+        const dateElement = document.getElementById("date").querySelector("span");
+        const weatherIconElement = document.getElementById("weather-icon");
+        const tempElement = document.getElementById("temp").querySelector("span");
+        const tempMinElement = document.getElementById("temp-min").querySelector("span");
+        const tempMaxElement = document.getElementById("temp-max").querySelector("span");
 
-        // Check if we have at least two days of data
-        if (data.length >= 2) {
-            const [day1, day2] = data; // Extract yesterday and today data
+        // Check if data is available
+        if (data.length >= 1) {
+            const todayData = data[0]; // Assuming first element is today's weather
 
-            // Update the "Yesterday" section
-            yesterday.innerHTML = `
-                <h3 class="lang-pl">Wczoraj</h3>
-                <h3 class="lang-en" style="display: none;">Yesterday</h3>
-                <img src="${weatherIcons[day1.weather] || weatherIcons.Clear}" alt="Weather Icon">
-                <p><strong class="lang-pl">Temperatura:</strong> <strong class="lang-en" style="display: none;">Temperature:</strong> ${day1.temp}°C</p>
-                <p><strong class="lang-pl">Min:</strong> <strong class="lang-en" style="display: none;">Min:</strong> ${day1.temp_min}°C</p>
-                <p><strong class="lang-pl">Max:</strong> <strong class="lang-en" style="display: none;">Max:</strong> ${day1.temp_max}°C</p>
-                <p><strong class="lang-pl">Data:</strong> <strong class="lang-en" style="display: none;">Date:</strong> ${day1.Date}</p>
-            `;
-
-            // Update the "Today" section
-            today.innerHTML = `
-                <h3 class="lang-pl">Dzisiaj</h3>
-                <h3 class="lang-en" style="display: none;">Today</h3>
-                <img src="${weatherIcons[day2.weather] || weatherIcons.Clear}" alt="Weather Icon">
-                <p><strong class="lang-pl">Temperatura:</strong> <strong class="lang-en" style="display: none;">Temperature:</strong> ${day2.temp}°C</p>
-                <p><strong class="lang-pl">Min:</strong> <strong class="lang-en" style="display: none;">Min:</strong> ${day2.temp_min}°C</p>
-                <p><strong class="lang-pl">Max:</strong> <strong class="lang-en" style="display: none;">Max:</strong> ${day2.temp_max}°C</p>
-                <p><strong class="lang-pl">Data:</strong> <strong class="lang-en" style="display: none;">Date:</strong> ${day2.Date}</p>
-            `;
+            // Update HTML elements with weather data
+            dateElement.innerText = todayData.Date || "Brak danych";
+            weatherIconElement.src = weatherIcons[todayData.weather] || weatherIcons.Clear;
+            tempElement.innerText = todayData.temp || "Brak danych";
+            tempMinElement.innerText = todayData.temp_min || "Brak danych";
+            tempMaxElement.innerText = todayData.temp_max || "Brak danych";
         } else {
-            // If not enough data, show an error message
-            document.getElementById("weather-data").innerText = "Brak wystarczających danych.";
+            weatherDataContainer.innerText = "Brak wystarczających danych pogodowych.";
         }
     })
     .catch(error => {
