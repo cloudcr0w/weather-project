@@ -32,6 +32,7 @@ This project is hosted and continuously deployed using AWS Amplify. Changes push
 ## PROJECT STATUS
 
 I am currently **building** the data pipeline and functionalities. Expect frequent commits and updates as I refine the process.
+LIVE: https://main.d24ky3ld7v2sml.amplifyapp.com/
 
 ## CONTRIBUTION & FEEDBACK
 
