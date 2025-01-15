@@ -210,7 +210,7 @@ footer p {
 	font-size: 1rem;
 }
 /* Stylizacja sekcji pogody */
-#weather-data {
+/* #weather-data {
 	display: flex;
 	gap: 20px;
 	justify-content: space-around;
@@ -238,7 +238,37 @@ footer p {
 	margin: 5px 0;
 	font-size: 1rem;
 	color: #555;
+} */
+
+
+/* Stylizacja sekcji pogody */
+.weather-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
 }
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.weather-info img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-details p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
 /* Sekcja wydarzeń */
 .events {
 	display: flex;
