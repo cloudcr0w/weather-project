@@ -23,16 +23,16 @@ This project is hosted and continuously deployed using AWS Amplify. Changes push
 ## KEY AWS SERVICES
 
 - **AWS Lambda** – Cyclical data fetching and processing
-- **Amazon EventBridge** – Triggers Lambda on a schedule (e.g., once daily)
+- **Amazon EventBridge** – Triggers Lambda on a schedule (once daily)
 - **Amazon S3** – Stores raw CSV/JSON data
 - **DynamoDB / RDS** – Holds processed data
-- **AWS Amplify (Gen1)** or **S3 + CloudFront** – Hosts a frontend for data visualization
+- **AWS Amplify (Gen2)** – Hosts a frontend for data visualization
 - **GitHub** – Version control & project history
 
 ## PROJECT STATUS
 
 I am currently **building** the data pipeline and functionalities. Expect frequent commits and updates as I refine the process.
-LIVE: https://main.d24ky3ld7v2sml.amplifyapp.com/
+*LIVE*: https://main.d24ky3ld7v2sml.amplifyapp.com/
 
 ## CONTRIBUTION & FEEDBACK
 
