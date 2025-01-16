@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	font-family: 'Arial', sans-serif;
 	line-height: 1.6;
-	background: #fdfcfb; /* Jasne pastelowe tło */
+	background: #fdfcfb; 
 	color: #333;
 }
 
@@ -37,8 +37,8 @@ body {
 
 /* Nagłówek */
 header {
-	background: #b8dfd8; /* Pastelowy zielony */
-	color: #2c3639; /* Ciemna szarość */
+	background: #b8dfd8; 
+	color: #2c3639; 
 	padding: 20px 0;
 	text-align: center;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -46,7 +46,7 @@ header {
 
 header h1 {
 	margin: 0;
-	font-size: 2.5rem;
+	font-size: 2.6rem;
 	font-weight: bold;
 }
 
@@ -106,7 +106,7 @@ header nav ul li a:hover {
 /* Sekcje */
 .section {
 	padding: 40px 0;
-	background: #f8f9fa; /* Delikatna szarość */
+	background: #f8f9fa;
 	margin-bottom: 20px;
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -121,7 +121,7 @@ header nav ul li a:hover {
 }
 
 .section.dark {
-	background: #dbe9d8; /* Delikatny pastelowy zielony */
+	background: #dbe9d8; 
 	color: #2c3639;
 }
 
@@ -199,7 +199,7 @@ header nav ul li a:hover {
 /* top */
 footer {
 	text-align: center;
-	background: #b8dfd8; /* Pastelowy zielony */
+	background: #b8dfd8; 
 	color: #2c3639;
 	padding: 10px 0;
 	margin-top: 20px;
@@ -209,36 +209,8 @@ footer p {
 	margin: 0;
 	font-size: 1rem;
 }
-/* Stylizacja sekcji pogody */
-/* #weather-data {
-	display: flex;
-	gap: 20px;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
 
-.weather-day {
-	background: #f8f9fa;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	padding: 20px;
-	text-align: center;
-	width: 30%;
-	max-width: 300px;
-}
 
-.weather-day h3 {
-	margin-bottom: 10px;
-	color: #2c3639;
-	font-size: 1.5rem;
-	font-weight: bold;
-}
-
-.weather-day p {
-	margin: 5px 0;
-	font-size: 1rem;
-	color: #555;
-} */
 
 
 /* Stylizacja sekcji pogody */
