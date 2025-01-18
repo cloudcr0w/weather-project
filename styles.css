@@ -1,7 +1,7 @@
 /* Ogólne style */
 body {
 	margin: 0;
-	font-family: 'Arial', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.6;
 	background: #fdfcfb; 
 	color: #333;
@@ -38,7 +38,7 @@ body {
 /* Nagłówek */
 header {
 	background: #b8dfd8; 
-	color: #2c3639; 
+	color: #39474b; 
 	padding: 20px 0;
 	text-align: center;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
