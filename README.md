@@ -28,6 +28,7 @@ This project is hosted and continuously deployed using AWS Amplify. Changes push
 - **Amazon S3** – Stores raw CSV/JSON data
 - **DynamoDB / RDS** – Holds processed data
 - **AWS Amplify (Gen2)** – Hosts a frontend for data visualization
+- **AWS Cloudwatch** - Holds logs from app (in future logs will be stored in S3)
 - **GitHub** – Version control & project history
 
 ## PROJECT STATUS
