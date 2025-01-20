@@ -1,0 +1,7 @@
+Resources:
+  WeatherAppBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: weather-app-data-12345
+      VersioningConfiguration:
+        Status: Enabled
