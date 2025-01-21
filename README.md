@@ -10,7 +10,7 @@ This repository showcases a **serverless application** that periodically fetches
 
 ### Wrocław Weather App
 
-This is a simple weather application showcasing the current weather data for Wrocław, Poland. The weather data is fetched from the OpenWeather API and is updated once a day. The app includes additional features such as:
+This is a simple serverless  weather application showcasing the current weather data for Wrocław, Poland. The weather data is fetched from the OpenWeather API and is updated once a day. The app includes additional features such as:
 
 - **Gallery** : A small collection of images showcasing iconic places in Wrocław, including attractions like the Main Square, Ostrów Tumski, and the Centennial Hall.
 What to Explore: Short descriptions of key attractions and their significance.
@@ -28,7 +28,9 @@ This project is hosted and continuously deployed using AWS Amplify. Changes push
 - **Amazon S3** – Stores raw CSV/JSON data
 - **DynamoDB / RDS** – Holds processed data
 - **AWS Amplify (Gen2)** – Hosts a frontend for data visualization
-- **AWS Cloudwatch** - Holds logs from app (in future logs will be stored in S3)
+- **AWS Cloudwatch** - Holds logs from app (in future logs will be stored in S3) :construction:
+- **AWS CloudTrail** -  for real-time monitoring and auditing of API activity :construction:
+- **AWS CloudFormation** - for automating infrastructure and improving deployment consistency :construction:
 - **GitHub** – Version control & project history
 
 ## PROJECT STATUS
