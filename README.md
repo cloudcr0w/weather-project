@@ -8,6 +8,9 @@ https://main.d24ky3ld7v2sml.amplifyapp.com
 
 This repository showcases a **serverless application** that periodically fetches weather data from a public API, stores it in the cloud, processes the information, and (in future iterations) visualizes the results.
 
+## Architecture
+Diagram on works...
+
 ### Wrocław Weather App
 
 This is a simple serverless  weather application showcasing the current weather data for Wrocław, Poland. The weather data is fetched from the OpenWeather API and is updated once a day. The app includes additional features such as:
