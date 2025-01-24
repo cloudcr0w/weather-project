@@ -1,4 +1,4 @@
-// URL API Gateway
+// URL for API Gateway
 const apiUrl = 'https://6yd3aewsd4.execute-api.us-east-1.amazonaws.com/weather'
 
 // Icons for weather conditions
@@ -11,7 +11,7 @@ const weatherIcons = {
 	Thunderstorm: '/img/thunderstorm.jpg',
 }
 
-// Fetch weather data from API
+// Fetch weather data from the API
 fetch(apiUrl)
 	.then(response => {
 		if (!response.ok) {
@@ -22,7 +22,7 @@ fetch(apiUrl)
 	.then(data => {
 		console.log('Data from API:', data)
 
-		// Wybierz elementy HTML
+		// Select HTML elements
 		const weatherDataContainer = document.getElementById('weather-data')
 		const dateElement = document.getElementById('date').querySelector('span')
 		const weatherIconElement = document.getElementById('weather-icon')
@@ -30,29 +30,29 @@ fetch(apiUrl)
 		const tempMinElement = document.getElementById('temp-min').querySelector('span')
 		const tempMaxElement = document.getElementById('temp-max').querySelector('span')
 
-		// Znajdź najnowsze dane na podstawie daty
+		// Find the latest data based on the date
 		const latestData = data.reduce((latest, current) => {
 			return new Date(current.Date) > new Date(latest.Date) ? current : latest
 		}, data[0])
 
 		console.log('Newest weather data:', latestData)
 
-		// Sprawdź, czy są dostępne dane
+		// Check if data is available
 		if (latestData) {
-			// Zaktualizuj elementy HTML najnowszymi danymi
-			dateElement.innerText = latestData.Date || 'Brak danych'
+			// Update HTML elements with the latest data
+			dateElement.innerText = latestData.Date || 'No data available'
 			weatherIconElement.src = weatherIcons[latestData.weather] || weatherIcons.Clear
-			tempElement.innerText = latestData.temp || 'Brak danych'
-			tempMinElement.innerText = latestData.temp_min || 'Brak danych'
-			tempMaxElement.innerText = latestData.temp_max || 'Brak danych'
+			tempElement.innerText = latestData.temp || 'No data available'
+			tempMinElement.innerText = latestData.temp_min || 'No data available'
+			tempMaxElement.innerText = latestData.temp_max || 'No data available'
 		} else {
-			// Wyświetl komunikat, jeśli brak danych
-			weatherDataContainer.innerText = 'Brak wystarczających danych pogodowych.'
+			// Display a message if no data is available
+			weatherDataContainer.innerText = 'Insufficient weather data available.'
 		}
 	})
 	.catch(error => {
 		console.error('Error fetching weather data:', error)
-		document.getElementById('weather-data').innerText = 'Nie udało się załadować danych pogodowych.'
+		document.getElementById('weather-data').innerText = 'Failed to load weather data.'
 	})
 
 // Language elements
