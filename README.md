@@ -9,7 +9,7 @@ https://main.d24ky3ld7v2sml.amplifyapp.com
 This repository showcases a **serverless application** that periodically fetches weather data from a public API, stores it in the cloud, processes the information, and (in future iterations) visualizes the results.
 
 ## Architecture
-![Architecture Diagram](./diagram.png)
+![Architecture Diagram](/img/diagram.png)
 
 ### Wrocław Weather App
 
