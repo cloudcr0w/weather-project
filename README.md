@@ -33,7 +33,7 @@ This project is hosted and continuously deployed using AWS Amplify. Changes push
 - **AWS Amplify (Gen2)** – Hosts a frontend for data visualization
 - **AWS Cloudwatch** - Holds logs from app (in future logs will be stored in S3) :construction:
 - **AWS CloudTrail** -  for real-time monitoring and auditing of API activity :construction:
-- **AWS CloudFormation** - for automating infrastructure and improving deployment consistency :construction:
+- **AWS CloudFormation** - for automating infrastructure and improving deployment consistency 
 - **GitHub** – Version control & project history
 
 ## PROJECT STATUS
