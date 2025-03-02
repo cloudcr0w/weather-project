@@ -1,0 +1,11 @@
+Resources:
+  WeatherAppBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: weather-app-data-12345
+      VersioningConfiguration:
+      Status: Enabled
+      AccessControl: PublicRead
+      # only for preview, this template is for showing my skills
+      WebsiteConfiguration:
+      IndexDocument: index.html

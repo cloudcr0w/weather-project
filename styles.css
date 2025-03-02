@@ -50,7 +50,7 @@ header h1 {
 	font-size: 3rem;
 	text-decoration: solid;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	text-shadow: 4px 4px 6px rgb(61, 110, 99);
+	text-shadow: 4px 4px 6px rgb(91, 128, 120);
 
 	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 	animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
