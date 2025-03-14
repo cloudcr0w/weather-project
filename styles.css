@@ -128,7 +128,7 @@ header nav ul li a:hover {
 }
 
 .weather-day {
-	background: #f8f9fa;
+	background: #cdcecf;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	padding: 20px;
@@ -153,7 +153,7 @@ header nav ul li a:hover {
 /* Sections */
 .section {
 	padding: 40px 0;
-	background: #f8f9fa;
+	background: #cdcecf;
 	margin-bottom: 20px;
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -216,7 +216,7 @@ header nav ul li a:hover {
 }
 
 .attraction {
-	background: #fff;
+	background: rgb(201, 201, 201)ecf;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
@@ -259,7 +259,7 @@ footer p {
 
 /* Weather section styling */
 .weather-card {
-	background: #fff;
+	background: #b5b7d4;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	padding: 20px;
@@ -294,7 +294,7 @@ footer p {
 }
 
 .event {
-	background: #fff;
+	background: #b4afaf;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
