@@ -4,7 +4,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.6;
 	background: #fdfcfb;
-	color: #333;
+	color: #2b6729;
 }
 
 .container {
@@ -108,7 +108,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-	color: #2c3639;
+	color: #305f6e;
 	text-decoration: none;
 	font-size: 1.1rem;
 	font-weight: bold;
@@ -128,7 +128,7 @@ header nav ul li a:hover {
 }
 
 .weather-day {
-	background: #cdcecf;
+	background: #0ab23c;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	padding: 20px;
@@ -153,24 +153,42 @@ header nav ul li a:hover {
 /* Sections */
 .section {
 	padding: 40px 0;
-	background: #cdcecf;
+	background: radial-gradient(circle, rgba(127, 221, 171, 1) 0%, rgba(79, 179, 125, 1) 50%, rgb(66, 131, 98) 100%);
 	margin-bottom: 20px;
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .section h2 {
+
 	font-size: 2rem;
 	text-align: center;
 	margin-bottom: 20px;
 	color: #2c3639;
 	font-weight: bold;
 }
+h2 {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	color: #1a4d1a;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 3px 3px 6px rgba(26, 77, 26, 0.4);
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+	border-bottom: 3px solid rgba(26, 77, 26, 0.6);
+	display: inline-block;
+}
+
 
 .section.dark {
-	background: #dbe9d8;
-	color: #323c3f;
+	background: radial-gradient(circle, rgba(90, 200, 255, 1) 0%, rgba(50, 150, 200, 1) 50%, rgba(30, 90, 150, 1) 100%);
+	color: #f0f8ff;
+	padding: 40px 0;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
 }
+
 
 .section ul {
 	list-style: none;
@@ -216,7 +234,7 @@ header nav ul li a:hover {
 }
 
 .attraction {
-	background: rgb(201, 201, 201)ecf;
+	background: rgb(242, 6, 6)ecf;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
@@ -259,7 +277,7 @@ footer p {
 
 /* Weather section styling */
 .weather-card {
-	background: #b5b7d4;
+	background: #e2d9d9;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	padding: 20px;
@@ -294,13 +312,14 @@ footer p {
 }
 
 .event {
-	background: #b4afaf;
+	background: radial-gradient(circle, rgba(240, 240, 240, 1) 0%, rgba(200, 200, 200, 1) 50%, rgba(160, 160, 160, 1) 100%);
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	text-align: center;
 	max-width: 300px;
 }
+
 
 .event img {
 	width: 100%;
