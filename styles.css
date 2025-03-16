@@ -38,11 +38,13 @@ body {
 
 /* Header */
 header {
-	background: #b8dfd8;
+	background: linear-gradient(135deg, rgba(152, 215, 152, 1) 0%, rgba(79, 179, 225, 1) 100%);
 	color: #2e1903;
 	padding: 20px 0;
 	text-align: center;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
 }
 
 header h1 {
@@ -50,8 +52,7 @@ header h1 {
 	font-size: 3rem;
 	text-decoration: solid;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	text-shadow: 4px 4px 6px rgb(91, 128, 120);
-
+	text-shadow: 4px 4px 6px rgba(34, 68, 34, 0.6);
 	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 	animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
@@ -105,6 +106,14 @@ header nav ul {
 
 header nav ul li {
 	margin: 0 15px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+header nav ul li:hover {
+	background: rgba(79, 179, 225, 0.3);
+	transform: scale(1.1);
 }
 
 header nav ul li a {
@@ -116,7 +125,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-	color: #379683;
+	color: #139f49;
 }
 
 /* Weather section styling */
@@ -156,7 +165,7 @@ header nav ul li a:hover {
 	background: radial-gradient(circle, rgba(127, 221, 171, 1) 0%, rgba(79, 179, 125, 1) 50%, rgb(66, 131, 98) 100%);
 	margin-bottom: 20px;
 	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
 }
 .section h2 {
 
@@ -181,11 +190,11 @@ h2 {
 
 
 .section.dark {
-	background: radial-gradient(circle, rgba(90, 200, 255, 1) 0%, rgba(50, 150, 200, 1) 50%, rgba(30, 90, 150, 1) 100%);
+	background: radial-gradient(circle, rgba(127, 221, 171, 1) 0%, rgba(79, 179, 125, 1) 50%, rgb(66, 131, 98) 100%);
 	color: #f0f8ff;
 	padding: 40px 0;
 	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
 	text-align: center;
 }
 
@@ -231,15 +240,19 @@ h2 {
 	gap: 20px;
 	justify-content: center;
 	margin-top: 20px;
+	background: linear-gradient(135deg, rgba(79, 179, 225, 0.3) 0%, rgba(152, 215, 152, 1) 100%);
+	padding: 20px;
+	border-radius: 10px;
 }
 
 .attraction {
-	background: rgb(242, 6, 6)ecf;
+	background: linear-gradient(135deg, rgba(214, 242, 100, 1) 0%, rgba(152, 215, 152, 1) 100%);
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	text-align: center;
 	max-width: 300px;
+	padding: 15px;
 }
 
 .attraction img {
@@ -247,6 +260,7 @@ h2 {
 	height: 200px;
 	object-fit: cover;
 	border-bottom: 3px solid #b8dfd8;
+	border-radius: 8px 8px 0 0;
 }
 
 .attraction h3 {
@@ -259,20 +273,6 @@ h2 {
 	font-size: 1rem;
 	padding: 0 10px 10px;
 	color: #555;
-}
-
-/* Footer */
-footer {
-	text-align: center;
-	background: #b8dfd8;
-	color: #2c3639;
-	padding: 10px 0;
-	margin-top: 20px;
-}
-
-footer p {
-	margin: 0;
-	font-size: 1rem;
 }
 
 /* Weather section styling */
