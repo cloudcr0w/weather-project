@@ -13,6 +13,20 @@ body {
 	margin: 0 auto;
 	padding: 20px;
 }
+header .logo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+header .city-logo {
+	width: 80px; /* Dostosuj wielkość */
+	height: auto;
+	display: block;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+}
 
 .language-switcher {
 	margin-top: 10px;
@@ -44,15 +58,16 @@ header {
 	text-align: center;
 	margin-bottom: 20px;
 	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
 	margin: 0;
-	font-size: 3rem;
-	text-decoration: solid;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	text-shadow: 4px 4px 6px rgba(34, 68, 34, 0.6);
+	font-size: 3.5rem;
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+	text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	letter-spacing: 2px;
 	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 	animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
@@ -165,10 +180,9 @@ header nav ul li a:hover {
 	background: radial-gradient(circle, rgba(127, 221, 171, 1) 0%, rgba(79, 179, 125, 1) 50%, rgb(66, 131, 98) 100%);
 	margin-bottom: 20px;
 	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 .section h2 {
-
 	font-size: 2rem;
 	text-align: center;
 	margin-bottom: 20px;
@@ -188,16 +202,14 @@ h2 {
 	display: inline-block;
 }
 
-
 .section.dark {
 	background: radial-gradient(circle, rgba(127, 221, 171, 1) 0%, rgba(79, 179, 125, 1) 50%, rgb(66, 131, 98) 100%);
 	color: #f0f8ff;
 	padding: 40px 0;
 	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 	text-align: center;
 }
-
 
 .section ul {
 	list-style: none;
@@ -312,14 +324,18 @@ h2 {
 }
 
 .event {
-	background: radial-gradient(circle, rgba(240, 240, 240, 1) 0%, rgba(200, 200, 200, 1) 50%, rgba(160, 160, 160, 1) 100%);
+	background: radial-gradient(
+		circle,
+		rgba(240, 240, 240, 1) 0%,
+		rgba(200, 200, 200, 1) 50%,
+		rgba(160, 160, 160, 1) 100%
+	);
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	text-align: center;
 	max-width: 300px;
 }
-
 
 .event img {
 	width: 100%;
