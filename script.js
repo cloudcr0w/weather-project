@@ -77,6 +77,8 @@ function switchLanguage(language) {
 		switchEn.classList.add('active')
 	}
 }
+// JavaScript to set the current year
+document.getElementById('current-year').textContent = new Date().getFullYear()
 
 // Event listeners for language switch
 switchPl.addEventListener('click', () => switchLanguage('pl'))
