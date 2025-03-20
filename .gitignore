@@ -1,5 +1,16 @@
 # Nie commitujemy pliku z API key!
 .env
+*.pyc
+__pycache__/
+bin/
+*.dist-info/
+certifi/
+charset_normalizer/
+idna/
+requests/
+urllib3/
+dateutil/
+six.py
 
 # Nie commitujemy ZIP-ów z kodem do Lambdy (generujemy je lokalnie przed wysłaniem)
 lambda/get_weather/*.zip
