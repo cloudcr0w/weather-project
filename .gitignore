@@ -1,0 +1,39 @@
+# Nie commitujemy pliku z API key!
+.env
+
+# Nie commitujemy ZIP-ów z kodem do Lambdy (generujemy je lokalnie przed wysłaniem)
+lambda/get_weather/*.zip
+lambda/analyze_weather/*.zip
+
+# Nie commitujemy zależności instalowanych przez pip
+lambda/get_weather/bin/
+lambda/get_weather/boto3/
+lambda/get_weather/botocore/
+lambda/get_weather/certifi/
+lambda/get_weather/charset_normalizer/
+lambda/get_weather/dotenv/
+lambda/get_weather/idna/
+lambda/get_weather/jmespath/
+lambda/get_weather/python-dateutil/
+lambda/get_weather/python-dotenv/
+lambda/get_weather/requests/
+lambda/get_weather/s3transfer/
+lambda/get_weather/six/
+lambda/get_weather/urllib3/
+lambda/get_weather/*.dist-info/
+
+lambda/analyze_weather/bin/
+lambda/analyze_weather/boto3/
+lambda/analyze_weather/botocore/
+lambda/analyze_weather/certifi/
+lambda/analyze_weather/charset_normalizer/
+lambda/analyze_weather/dotenv/
+lambda/analyze_weather/idna/
+lambda/analyze_weather/jmespath/
+lambda/analyze_weather/python-dateutil/
+lambda/analyze_weather/python-dotenv/
+lambda/analyze_weather/requests/
+lambda/analyze_weather/s3transfer/
+lambda/analyze_weather/six/
+lambda/analyze_weather/urllib3/
+lambda/analyze_weather/*.dist-info/
