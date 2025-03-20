@@ -3,10 +3,19 @@ import boto3
 import datetime
 import logging
 from decimal import Decimal
+import os
 
 # Logger configuration
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+
+# Initialize S3 and DynamoDB clients
+s3 = boto3.client('s3')
+dynamo = boto3.resource('dynamodb')
+
+# Pobieramy nazwy z ENV (jeśli brak, używamy domyślnych wartości)
+bucket_name = os.getenv("BUCKET_NAME", "weather-project-raw-data")
+table_name = os.getenv("TABLE_NAME", "WeatherStats")
 
 # Helper function to convert Decimal to float (for JSON serialization)
 def decimal_default(obj):
@@ -16,13 +25,6 @@ def decimal_default(obj):
 
 def lambda_handler(event, context):
     logger.info("Lambda function invoked with event: %s", event)
-    
-    # Initialize S3 and DynamoDB clients
-    s3 = boto3.client('s3')
-    dynamo = boto3.resource('dynamodb')
-
-    bucket_name = "weather-project-raw-data"
-    table_name = "WeatherStats"
 
     # Fetching the list of objects from the S3 bucket
     logger.info("Listing objects in S3 bucket: %s with prefix 'raw/'", bucket_name)
