@@ -41,6 +41,44 @@ This project is hosted and continuously deployed using AWS Amplify. Changes push
 I am currently **building** the data pipeline and functionalities. Expect frequent commits and updates as I refine the process.
 *LIVE*: https://main.d24ky3ld7v2sml.amplifyapp.com/
 
+
+## HOW TO RUN LOCALLY
+
+To run this project on your local machine:
+
+1️⃣ **Clone the repository**  
+
+```sh
+git clone https://github.com/your-username/weather-project.git
+cd weather-project
+```
+
+2️⃣ Install dependencies
+
+Backend (Python):
+```sh
+pip install -r requirements.txt
+```
+Frontend (Node.js):
+```sh
+cd frontend
+npm install
+npm start
+```
+
+3️⃣ Run backend locally
+
+
+```sh
+python lambda/get_weather/main.py
+```
+
+4️⃣ Deploy to AWS (manual method)
+
+```sh
+aws lambda update-function-code --function-name GetWeatherFunction --zip-file fileb://lambda/get_weather/get_weather_lambda.zip
+```
+
 ## CONTRIBUTION & FEEDBACK
 
 Feedback is always welcome! Feel free to open an **issue** or submit a **pull request** with any suggestions or improvements.
