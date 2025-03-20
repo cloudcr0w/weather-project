@@ -54,20 +54,28 @@ git clone https://github.com/your-username/weather-project.git
 cd weather-project
 ```
 
-2️⃣  Set up API Key
+2️⃣ Set up environment variables
+This project uses environment variables stored in a .env file.
 
-The application requires an OpenWeather API key.
-Create a .env file in the project root and add:
+Recommended method: Copy the .env.example file and rename it to .env
+```sh
+cp .env.example .env
+```
+Open .env and replace placeholder values with your own API keys and AWS settings.
+Alternatively, you can manually create a .env file in the project root and add:
 ```sh
 OPENWEATHER_API_KEY=your_api_key_here
+BUCKET_NAME=your_bucket_name_here
+TABLE_NAME=your_table_name_here
 ```
-Alternatively, export it as an environment variable
+Or export them as environment variables:
 ```sh
 export OPENWEATHER_API_KEY=your_api_key_here
+export BUCKET_NAME=your_bucket_name_here
+export TABLE_NAME=your_table_name_here
 ```
 
 3️⃣ Install dependencies
-
 Backend (Python):
 ```sh
 pip install -r requirements.txt
@@ -81,7 +89,6 @@ npm start
 ```
 
 4️⃣ Run backend locally
-
 Get Weather Data
 ```sh
 python lambda/get_weather/main.py
@@ -92,7 +99,6 @@ python lambda/analyze_weather/analyze_data.py
 ```
 
 5️⃣ Deploy to AWS (manual method)
-
 ```sh
 aws lambda update-function-code --function-name GetWeatherFunction --zip-file fileb://lambda/get_weather/get_weather_lambda.zip
 aws lambda update-function-code --function-name AnalyzeWeatherFunction --zip-file fileb://lambda/analyze_weather/analyze_weather_lambda.zip
