@@ -7,6 +7,7 @@ https://main.d24ky3ld7v2sml.amplifyapp.com
 ## WHAT IS THIS PROJECT?
 
 This repository showcases a **serverless application** that periodically fetches weather data from a public API, stores it in the cloud, processes the information, and (in future iterations) visualizes the results.
+This project uses the **OpenWeather API (free plan)**, which allows fetching weather data **once per day** due to rate limits. If you want to run this project with your own API key, you will need to register on [OpenWeather](https://openweathermap.org/api).
 
 ## Architecture
 ...soon
@@ -53,12 +54,25 @@ git clone https://github.com/your-username/weather-project.git
 cd weather-project
 ```
 
-2️⃣ Install dependencies
+2️⃣  Set up API Key
+
+The application requires an OpenWeather API key.
+Create a .env file in the project root and add:
+```sh
+OPENWEATHER_API_KEY=your_api_key_here
+```
+Alternatively, export it as an environment variable
+```sh
+export OPENWEATHER_API_KEY=your_api_key_here
+```
+
+3️⃣ Install dependencies
 
 Backend (Python):
 ```sh
 pip install -r requirements.txt
 ```
+
 Frontend (Node.js):
 ```sh
 cd frontend
@@ -66,17 +80,22 @@ npm install
 npm start
 ```
 
-3️⃣ Run backend locally
+4️⃣ Run backend locally
 
-
+Get Weather Data
 ```sh
 python lambda/get_weather/main.py
 ```
+Analyze Weather Data
+```sh
+python lambda/analyze_weather/analyze_data.py
+```
 
-4️⃣ Deploy to AWS (manual method)
+5️⃣ Deploy to AWS (manual method)
 
 ```sh
 aws lambda update-function-code --function-name GetWeatherFunction --zip-file fileb://lambda/get_weather/get_weather_lambda.zip
+aws lambda update-function-code --function-name AnalyzeWeatherFunction --zip-file fileb://lambda/analyze_weather/analyze_weather_lambda.zip
 ```
 
 ## CONTRIBUTION & FEEDBACK
