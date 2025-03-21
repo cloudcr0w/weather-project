@@ -23,8 +23,9 @@ jobs:
 
       - name: Install pytest for test runner
         run: |
-            pip -m install pytest  --upgrade pip
-            pip install pytest
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+        
         
       - name: Install dependencies
         run: |
