@@ -39,9 +39,24 @@ This project is hosted and continuously deployed using AWS Amplify. Changes push
 
 ## PROJECT STATUS
 
-I am currently **building** the data pipeline and functionalities. Expect frequent commits and updates as I refine the process.
-*LIVE*: https://main.d24ky3ld7v2sml.amplifyapp.com/
 
+- ✅ **Weather Data Collection** – Fully functional
+- ✅ **AWS Lambda & DynamoDB Integration** – Working as expected
+- ✅ **GitHub Actions CI/CD** – Automated deployment & testing
+- 🔄 **Planned Updates**:
+  - Improve frontend UI/UX
+  - Add historical weather trends visualization
+  - Enhance security with AWS IAM policies
+
+## ✅ Continuous Integration & Deployment (CI/CD)
+
+This project uses **GitHub Actions** to automate deployment and testing:
+
+- ✅ **Automated Testing** – Every push runs unit tests using `pytest`
+- ✅ **Automatic AWS Deployment** – If tests pass, the Lambda function is updated
+- ✅ **No Manual Uploading** – Code is packed and pushed automatically
+
+Check out the [`.github/workflows/deploy-getweather.yml`](.github/workflows/deploy-getweather.yml) file for details.
 
 ## HOW TO RUN LOCALLY
 
@@ -98,10 +113,14 @@ Analyze Weather Data
 python lambda/analyze_weather/analyze_data.py
 ```
 
-5️⃣ Deploy to AWS (manual method)
+5️⃣ Deploy to AWS
+
+This project **uses GitHub Actions for deployment**, so **you don't need to manually upload ZIP files**.
+
+If you want to deploy manually, use:
 ```sh
-aws lambda update-function-code --function-name GetWeatherFunction --zip-file fileb://lambda/get_weather/get_weather_lambda.zip
-aws lambda update-function-code --function-name AnalyzeWeatherFunction --zip-file fileb://lambda/analyze_weather/analyze_weather_lambda.zip
+zip -r get_weather_lambda.zip lambda/get_weather/*
+aws lambda update-function-code --function-name GetWeatherFunction --zip-file fileb://get_weather_lambda.zip
 ```
 
 ## CONTRIBUTION & FEEDBACK
@@ -109,3 +128,8 @@ aws lambda update-function-code --function-name AnalyzeWeatherFunction --zip-fil
 Feedback is always welcome! Feel free to open an **issue** or submit a **pull request** with any suggestions or improvements.
 
 :construction: **STAY TUNED FOR UPDATES!** :construction:
+
+## 🔗 Connect with me!
+- 🌍 **Portfolio**: [crow-project.click](https://crow-project.click)
+- 🏗 **GitHub**: [github.com/cloudcr0w](https://github.com/cloudcr0w)
+- 💼 **LinkedIn**: [linkedin.com/in/adam-wrona-111ba728b](https://www.linkedin.com/in/adam-wrona-111ba728b)
