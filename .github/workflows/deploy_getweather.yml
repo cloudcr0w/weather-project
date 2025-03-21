@@ -1,4 +1,4 @@
-name: Deploy GetWeather Lambda
+name: Deploy GetWeather Lambda function
 
 on:
   push:
