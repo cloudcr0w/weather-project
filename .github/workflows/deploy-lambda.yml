@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r lambda/get_weather/requirements.txt -t lambda/get_weather/
+          pip install -r requirements.txt -t lambda/get_weather/
 
       - name: Zip Lambda
         run: |
