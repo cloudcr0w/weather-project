@@ -19,11 +19,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.14.0-alpha.6
+          python-version: '3.12.9'
 
       - name: Install dependencies
         run: |
           pip install -r requirements.txt -t lambda/get_weather/
+          pip install -r requirements.txt  
+          # for local tests
+
+      - name: Run tests
+        run: |
+          pytest tests/
 
       - name: Zip Lambda
         run: |
