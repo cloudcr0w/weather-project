@@ -1,0 +1,50 @@
+name: Deploy GetWeather Lambda
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'lambda/get_weather/**'
+      - '.github/workflows/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.9'
+
+      - name: Install pytest for test runner
+        run: |
+            pip install pytest
+        
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt -t lambda/get_weather/
+          pip install -r requirements.txt  
+          # for local tests
+
+      - name: Run tests
+        run: |
+          pytest tests/
+
+      - name: Zip Lambda
+        run: |
+          cd lambda/get_weather
+          zip -r ../get_weather_lambda.zip .
+
+      - name: Deploy to AWS Lambda
+        uses: appleboy/lambda-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: us-east-1
+          function_name: GetWeatherData
+          zip_file: lambda/get_weather_lambda.zip
