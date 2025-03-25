@@ -5,6 +5,8 @@ import datetime
 import logging
 import os
 from dotenv import load_dotenv
+from decimal import Decimal
+
 
 # Load environment variables from .env file
 load_dotenv()
@@ -76,9 +78,9 @@ def lambda_handler(event, context):
             Item={
                 "City": CITY,
                 "Date": now.split("T")[0],  # YYYY-MM-DD
-                "temp": data["main"]["temp"],
-                "temp_max": data["main"]["temp_max"],
-                "temp_min": data["main"]["temp_min"]
+                "temp": Decimal(str(data["main"]["temp"])),
+                "temp_max": Decimal(str(data["main"]["temp_max"])),
+                "temp_min": Decimal(str(data["main"]["temp_min"]))
             }
         )
         logger.info("Successfully stored data in DynamoDB: %s", TABLE_NAME)
