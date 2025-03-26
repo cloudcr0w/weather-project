@@ -202,21 +202,6 @@ body {
   }
   
   /* --- Events --- */
-  .events {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	justify-content: center;
-  }
-  
-  .event {
-	background: radial-gradient(circle, #f0f0f0 0%, #c8c8c8 50%, #a0a0a0 100%);
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-	text-align: center;
-	max-width: 300px;
-  }
   
   .event img {
 	width: 100%;
@@ -238,18 +223,18 @@ body {
   }
   
   /* --- Explore / Attractions --- */
-  .attractions {
+  .attractions, .events {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
 	justify-content: center;
 	margin-top: 20px;
-	background: linear-gradient(135deg, rgba(79, 179, 225, 0.3) 0%, rgba(152, 215, 152, 1) 100%);
+	background: linear-gradient(135deg, rgba(79, 179, 225, 0.3) 0%, rgb(104, 202, 104) 100%);
 	padding: 20px;
 	border-radius: 10px;
   }
   
-  .attraction {
+  .attraction , .event {
 	background: linear-gradient(135deg, #d6f264 0%, #98d798 100%);
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
