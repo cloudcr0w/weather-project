@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Weather CSV</title>
+</head>
+<body>
+  <h1>Download Weather Data</h1>
+  <button onclick="downloadWeatherAsCSV()">Download CSV</button>
+
+  <script>
+    async function downloadWeatherAsCSV() {
+   
+      const jsonUrl = "https://weather-project-raw-data.s3.amazonaws.com/raw/wroclaw,pl/2025-05-05T10:00:04.508666.json";
+
+      try {
+        const response = await fetch(jsonUrl);
+        const data = await response.json();
+
+        const csvRows = [];
+        csvRows.push("Date,Temperature,Humidity,Description");
+
+        const date = data.dt ? new Date(data.dt * 1000).toISOString().split("T")[0] : "N/A";
+        const temp = data.main?.temp ?? "N/A";
+        const humidity = data.main?.humidity ?? "N/A";
+        const description = data.weather?.[0]?.description ?? "N/A";
+
+        csvRows.push(`${date},${temp},${humidity},${description}`);
+
+        const csvContent = csvRows.join("\n");
+        const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", "weather.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+      } catch (error) {
+        console.error("Błąd przy pobieraniu JSON:", error);
+        alert("Nie udało się pobrać danych pogodowych.");
+      }
+    }
+  </script>
+</body>
+</html>
