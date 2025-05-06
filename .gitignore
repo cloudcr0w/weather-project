@@ -1,4 +1,4 @@
-# Nie commitujemy pliku z API key!
+# 
 .env
 *.pyc
 __pycache__/
@@ -12,11 +12,12 @@ urllib3/
 dateutil/
 six.py
 
-# Nie commitujemy ZIP-ów z kodem do Lambdy (generujemy je lokalnie przed wysłaniem)
+# 
 lambda/get_weather/*.zip
 lambda/analyze_weather/*.zip
+lambda/get_latest_weather_file/*.zip
 
-# Nie commitujemy zależności instalowanych przez pip
+# 
 lambda/get_weather/bin/
 lambda/get_weather/boto3/
 lambda/get_weather/botocore/
