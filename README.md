@@ -10,7 +10,38 @@ This repository showcases a **serverless application** that periodically fetches
 This project uses the **OpenWeather API (free plan)**, which allows fetching weather data **once per day** due to rate limits. If you want to run this project with your own API key, you will need to register on [OpenWeather](https://openweathermap.org/api).
 
 ## Architecture
-...soon
+```bash
+## Architecture
+
+```
++------------------------+         +-------------------+
+|  GitHub (repo + CI/CD)|  --->   |  AWS Amplify      |
+|  + GitHub Actions     |         |  (frontend deploy)|
++------------------------+         +-------------------+
+
+                                        |
+                                        v
+                               +------------------+
+                               |  Static Website  |
+                               |  (download.html) |
+                               +------------------+
+                                        |
+                                        v
+                               [FETCH LATEST JSON]
+                                        |
+                                        v
++--------------+     invokes     +----------------------+     reads      +------------------------------+
+|   User       |  ----------->   |   API Gateway        |  ----------->  | Lambda: GetLatestWeatherFile |
+| (browser)    |                 |  /latest-weather     |                |  (list & get from S3)         |
++--------------+                 +----------------------+                +------------------------------+
+                                                                                |
+                                                                                v
+                                                                 +--------------------------------------+
+                                                                 |  S3 bucket: weather-project-raw-data |
+                                                                 |  raw/wroclaw,pl/*.json               |
+                                                                 +--------------------------------------+
+```
+```
 
 ### Wrocław Weather App
 
@@ -39,14 +70,8 @@ This project is hosted and continuously deployed using AWS Amplify. Changes push
 
 ## PROJECT STATUS
 
+📌 See project roadmap: [PROJECT_PROGRESS.md](./PROJECT_PROGRESS.md)
 
-- ✅ **Weather Data Collection** – Fully functional
-- ✅ **AWS Lambda & DynamoDB Integration** – Working as expected
-- ✅ **GitHub Actions CI/CD** – Automated deployment & testing
-- 🔄 **Planned Updates**:
-  - Improve frontend UI/UX
-  - Add historical weather trends visualization
-  - Enhance security with AWS IAM policies
 
 ## ✅ Continuous Integration & Deployment (CI/CD)
 
