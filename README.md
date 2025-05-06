@@ -11,9 +11,7 @@ This project uses the **OpenWeather API (free plan)**, which allows fetching wea
 
 ## Architecture
 ```bash
-## Architecture
 
-```
 +------------------------+         +-------------------+
 |  GitHub (repo + CI/CD)|  --->   |  AWS Amplify      |
 |  + GitHub Actions     |         |  (frontend deploy)|
@@ -41,7 +39,7 @@ This project uses the **OpenWeather API (free plan)**, which allows fetching wea
                                                                  |  raw/wroclaw,pl/*.json               |
                                                                  +--------------------------------------+
 ```
-```
+
 
 ### Wrocław Weather App
 
