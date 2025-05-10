@@ -6,7 +6,86 @@ body {
 	background: #fdfcfb;
 	color: #2b6729;
   }
-  
+/* === NIGHT MODE FIX === */
+body.night {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.night header {
+  background: #1f1f1f;
+  color: #ffffff;
+}
+
+body.night .section {
+  background: #1a1a1a;
+  color: #ddd;
+}
+
+body.night .weather-card {
+  background: #2b2b2b;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.night .weather-details p {
+  color: #f0f0f0;
+}
+
+body.night h2,
+body.night .section h2,
+body.night .attraction h3,
+body.night .event h3 {
+  color: #f8f8f8;
+  text-shadow: none;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.night header nav ul li a {
+  color: #a9d6f2;
+}
+
+body.night header nav ul li a:hover {
+  color: #4de68a;
+}
+
+body.night .attractions,
+body.night .events {
+  background: linear-gradient(135deg, #1e2a38, #273745);
+  border-radius: 10px;
+}
+
+body.night .attraction,
+body.night .event {
+  background: #2c3e50;
+  color: #eee;
+}
+
+body.night .attraction p,
+body.night .event p {
+  background: none;
+  color: #e6e6e6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+body.night .gallery img {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+body.night footer {
+  background: #1c1c1c;
+  color: #bbb;
+}
+
+body.night footer a {
+  color: #66ccff;
+}
+
+body.night footer a:hover {
+  color: #66ff99;
+}
+
+
   .container {
 	width: 90%;
 	max-width: 1200px;
@@ -317,4 +396,4 @@ body {
 	text-decoration: underline;
 	color: #11e161;
   }
-  
+ 
