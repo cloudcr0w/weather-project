@@ -83,3 +83,19 @@ document.getElementById('current-year').textContent = new Date().getFullYear()
 // Event listeners for language switch
 switchPl.addEventListener('click', () => switchLanguage('pl'))
 switchEn.addEventListener('click', () => switchLanguage('en'))
+
+
+
+
+// 🌗 Theme toggle
+function toggleTheme() {
+  const isNight = document.body.classList.contains("night");
+
+  if (isNight) {
+    document.body.classList.remove("night");
+    document.body.classList.add("day");
+  } else {
+    document.body.classList.remove("day");
+    document.body.classList.add("night");
+  }
+}
