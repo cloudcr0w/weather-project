@@ -5,6 +5,7 @@ body {
 	line-height: 1.6;
 	background: #fdfcfb;
 	color: #2b6729;
+	transition: background 0.5s, color 0.5s;
   }
 /* === NIGHT MODE FIX === */
 body.night {
@@ -115,6 +116,7 @@ body.night footer a:hover {
 	margin-bottom: 20px;
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+	transition: background 1s, color 0.3s;
   }
   
   header h1 {
@@ -218,6 +220,7 @@ body.night footer a:hover {
 	margin-bottom: 20px;
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+	transition: background 0.3s, color 0.3s;
   }
   
   .section h2 {
@@ -261,6 +264,7 @@ body.night footer a:hover {
 	text-align: center;
 	max-width: 400px;
 	margin: 0 auto;
+	transition: background 0.3s, color 0.3s;
   }
   
   .weather-info {
@@ -268,16 +272,19 @@ body.night footer a:hover {
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
+	transition: background 0.3s, color 0.3s;
   }
   
   .weather-info img {
 	width: 100px;
 	height: 100px;
+	transition: background 0.3s, color 0.3s;
   }
   
   .weather-details p {
 	font-size: 1.2rem;
 	margin: 5px 0;
+	transition: background 0.3s, color 0.3s;
   }
   
   /* --- Events --- */
@@ -287,18 +294,21 @@ body.night footer a:hover {
 	height: 200px;
 	object-fit: cover;
 	border-bottom: 3px solid #b8dfd8;
+	transition: background 0.3s, color 0.3s;
   }
   
   .event h3 {
 	font-size: 1.5rem;
 	margin: 10px 0;
 	color: #2c3639;
+	transition: background 0.3s, color 0.3s;
   }
   
   .event p {
 	font-size: 1rem;
 	padding: 0 10px 10px;
 	color: #555;
+	transition: background 0.3s, color 0.3s;
   }
   
   /* --- Explore / Attractions --- */
@@ -311,6 +321,7 @@ body.night footer a:hover {
 	background: linear-gradient(135deg, rgba(79, 179, 225, 0.3) 0%, rgb(104, 202, 104) 100%);
 	padding: 20px;
 	border-radius: 10px;
+	transition: background 0.3s, color 0.3s;
   }
   
   .attraction , .event {
@@ -321,6 +332,7 @@ body.night footer a:hover {
 	text-align: center;
 	max-width: 300px;
 	padding: 15px;
+	transition: background 0.3s, color 0.3s;
   }
   
   .attraction img {
@@ -329,18 +341,21 @@ body.night footer a:hover {
 	object-fit: cover;
 	border-bottom: 3px solid #b8dfd8;
 	border-radius: 8px 8px 0 0;
+	transition: background 0.3s, color 0.3s;
   }
   
   .attraction h3 {
 	font-size: 1.5rem;
 	margin: 10px 0;
 	color: #2c3639;
+	transition: background 0.3s, color 0.3s;
   }
   
   .attraction p {
 	font-size: 1rem;
 	padding: 0 10px 10px;
 	color: #555;
+	transition: background 0.3s, color 0.3s;
   }
   
   /* --- Gallery --- */
@@ -349,6 +364,7 @@ body.night footer a:hover {
 	justify-content: center;
 	gap: 20px;
 	flex-wrap: wrap;
+	transition: background 0.3s, color 0.3s;
   }
   
   .gallery img {
@@ -379,6 +395,7 @@ body.night footer a:hover {
 	left: 0;
 	box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	transition: background 0.3s, color 0.3s;
   }
   
   footer p {
