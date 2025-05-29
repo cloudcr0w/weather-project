@@ -1,3 +1,5 @@
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=cloudcr0w.sentiment-analyzer-devops)
+
 # WEATHER-PROJECT :cloud:
 
 WELCOME to the WEATHER-PROJECT - my second project showing my skills in AWS
