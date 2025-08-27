@@ -2,7 +2,7 @@
 
 # WEATHER-PROJECT :cloud:
 
-WELCOME to the WEATHER-PROJECT - my second project showing my skills in AWS
+WELCOME to the WEATHER-PROJECT - Serverless application fetching daily weather data, storing it in AWS, and serving it via API + frontend
 :construction: **UNDER CONSTRUCTION** :construction:
 https://main.d24ky3ld7v2sml.amplifyapp.com
 
@@ -47,43 +47,41 @@ This project uses the **OpenWeather API (free plan)**, which allows fetching wea
 
 This is a simple serverless  weather application showcasing the current weather data for Wrocław, Poland. The weather data is fetched from the OpenWeather API and is updated once a day. Structure is : html, css, js, python files. The app includes additional features such as:
 
-- **Gallery** : A small collection of images showcasing iconic places in Wrocław, including attractions like the Main Square, Ostrów Tumski, and the Centennial Hall.
-What to Explore: Short descriptions of key attractions and their significance.
-- **Events** : Information about major upcoming events in Wrocław, such as the Christmas Market, Good Beer Festival, and New Horizons Film Festival.
-- **Multilingual Support** : The app supports both Polish and English languages, with a simple toggle switch to change the language.
-The application provides a clean, responsive design, making it user-friendly on both desktop and mobile devices.
+- **Daily weather updates** (Wrocław, Poland)  
+- **Events & Gallery**: extra city info for demo frontend  
+- **Responsive frontend** (HTML/CSS/JS)  
+- **Continuous Deployment** with AWS Amplify  
 
 - **Continuous Deployment with AWS Amplify**
 This project is hosted and continuously deployed using AWS Amplify. Changes pushed to the main branch are automatically built and deployed.
 
-## KEY AWS SERVICES
+## 🛠 AWS Services Used
 
-- **AWS Lambda** – Cyclical data fetching and processing
-- **Amazon EventBridge** – Triggers Lambda on a schedule (once daily)
-- **Amazon S3** – Stores raw CSV/JSON data
-- **DynamoDB / RDS** – Holds processed data
-- **AWS Amplify (Gen2)** – Hosts a frontend for data visualization
-- **AWS Cloudwatch** - Holds logs from app (in future logs will be stored in S3) :construction:
-- **AWS CloudTrail** -  for real-time monitoring and auditing of API activity :construction:
-- **AWS CloudFormation** - for automating infrastructure and improving deployment consistency 
-- **GitHub** – Version control & project history
+- **AWS Lambda** – fetch & process weather data  
+- **Amazon EventBridge** – daily schedule trigger  
+- **Amazon S3** – raw weather data storage  
+- **Amazon DynamoDB** – processed results  
+- **AWS Amplify** – frontend hosting & CI/CD  
+- **AWS CloudWatch** – logging & monitoring  
+- **AWS CloudTrail** – auditing API activity *(planned)*  
+- **AWS CloudFormation** – IaC for infrastructure  
+- **GitHub Actions** – CI/CD automation 
 
 ## PROJECT STATUS
 
 📌 See project roadmap: [PROJECT_PROGRESS.md](./PROJECT_PROGRESS.md)
 
 
-## ✅ Continuous Integration & Deployment (CI/CD)
+## ✅ CI/CD Pipeline
 
-This project uses **GitHub Actions** to automate deployment and testing:
+- Every push → **unit tests (pytest)**  
+- If tests pass → **Lambda code updated automatically**  
+- Amplify → **frontend redeployed**  
 
-- ✅ **Automated Testing** – Every push runs unit tests using `pytest`
-- ✅ **Automatic AWS Deployment** – If tests pass, the Lambda function is updated
-- ✅ **No Manual Uploading** – Code is packed and pushed automatically
+Workflow file:  
+[`.github/workflows/deploy-getweather.yml`](.github/workflows/deploy-getweather.yml)
 
-Check out the [`.github/workflows/deploy-getweather.yml`](.github/workflows/deploy-getweather.yml) file for details.
-
-## HOW TO RUN LOCALLY
+## RUN LOCALLY
 
 To run this project on your local machine:
 
@@ -156,5 +154,5 @@ Feedback is always welcome! Feel free to open an **issue** or submit a **pull re
 
 ## 🔗 Connect with me!
 - 🌍 **Portfolio**: [crow-project.click](https://crow-project.click)
-- 🏗 **GitHub**: [github.com/cloudcr0w](https://github.com/cloudcr0w)
-- 💼 **LinkedIn**: [linkedin.com/in/adam-wrona-111ba728b](https://www.linkedin.com/in/adam-wrona-111ba728b)
+- 🏗  **GitHub**: [github.com/cloudcr0w](https://github.com/cloudcr0w)
+- 💼  **LinkedIn**: [linkedin.com/in/adam-wrona-111ba728b](https://www.linkedin.com/in/adam-wrona-111ba728b)
