@@ -1,6 +1,16 @@
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=cloudcr0w.weather-project)
 
 # WEATHER-PROJECT :cloud:
+
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=cloudcr0w.weather-project)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=cloudcr0w.weather-project)
+![GitHub stars](https://img.shields.io/github/stars/cloudcr0w/weather-project?style=social)
+![GitHub forks](https://img.shields.io/github/forks/cloudcr0w/weather-project?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/cloudcr0w/weather-project)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/cloudcr0w/weather-project/deploy-getweather.yml?branch=main)
+![AWS](https://img.shields.io/badge/AWS-Lambda%20%7C%20S3%20%7C%20Amplify-orange?logo=amazon-aws)
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![License](https://img.shields.io/github/license/cloudcr0w/weather-project)
+
 
 WELCOME to the WEATHER-PROJECT - Serverless application fetching daily weather data, storing it in AWS, and serving it via API + frontend
 :construction: **UNDER CONSTRUCTION** :construction:
